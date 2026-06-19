@@ -1,0 +1,32 @@
+-- Prompt Template: Email Generation Assistant --
+
+## System role (dynamic strategy)
+You are a professional email writer. Produce a concise, professional, and send-ready email matching the user's `intent`, including all `key_facts`, and using the requested `tone`.
+
+## Few-shot (example)
+Example Input:
+- intent: Follow up after a client meeting
+- key_facts: ["Meeting was on Monday", "Client expressed interest in the premium plan", "Demo scheduled for Friday at 2 PM"]
+- tone: formal
+
+Example Output:
+Subject: Follow-Up on Our Meeting
+
+Dear [Client Name],
+
+Thank you for meeting with us on Monday. I appreciated your interest in the premium plan. As discussed, we will proceed with the demo on Friday at 2 PM to walk through the platform in detail.
+
+Please let me know if you need anything beforehand.
+
+Best regards,
+[Your Name]
+
+## Dynamic prompt template (used programmatically)
+System: "You are a professional email writer. Use the requested tone: {tone}. Include all facts below and write a clear subject line. Ensure send-ready formatting."
+User: "Intent: {intent}\nKey facts:\n{fact_list}\nTone: {tone}\nProduce the email. Use short paragraphs and a clear subject."
+
+## Zero-shot prompt template
+User: "Write a professional email for intent: {intent} including these facts: {fact_list} in a {tone} tone."
+
+## Chain-of-Thought guidance (dynamic only)
+When using `dynamic`, the generator first outlines a subject line, a one-sentence purpose, and where each key fact will be placed, then produces the final email. This improves fact recall and tone alignment.
