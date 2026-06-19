@@ -27,9 +27,9 @@ and evaluates their quality using 3 custom LLM-as-a-Judge metrics.
 ### Custom Evaluation Metrics
 | Metric | Description |
 |---|---|
-| **Fact Recall Score** | Did the email include all required key facts? (0–10) |
-| **Tone Alignment Score** | Does the writing style match the requested tone? (0–10) |
-| **Professional Usability Score** | Is this email ready to send as-is? (0–10) |
+| **Fact Recall Score** | Did the email include all required key facts? (0 - 10) |
+| **Tone Alignment Score** | Does the writing style match the requested tone? (0 - 10) |
+| **Professional Usability Score** | Is this email ready to send as-is? (0 - 10) |
 
 ---
 
