@@ -47,27 +47,23 @@ email-assistant/
 pip install -r requirements.txt
 ```
 
-### 2. Set the OpenAI API key
+### 2. Create environment file
 
-Linux/macOS:
+Copy the example file and add your OpenAI key:
 
 ```bash
-export OPENAI_API_KEY=your_api_key_here
+copy .env.example .env
 ```
 
-Windows PowerShell:
+Then open `.env` and set:
 
-```powershell
-$env:OPENAI_API_KEY="your_api_key_here"
-```
-
-Or create a `.env` file:
-
-```
+```text
 OPENAI_API_KEY=your_api_key_here
 ```
 
 ### 3. Start the server
+
+From the project root:
 
 ```bash
 uvicorn main:app --reload
